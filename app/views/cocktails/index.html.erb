@@ -1,0 +1,14 @@
+<h1>Welcome to Vesper Lives</h1>
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-3">
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<p>Find me in app/views/cocktails/index.html.erb</p>
