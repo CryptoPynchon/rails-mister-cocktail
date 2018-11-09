@@ -1,5 +1,8 @@
 <h1><%= @cocktail.name %></h1>
 
 <% @cocktail.doses.each do |dose_object| %>
-<p><%= dose_object.description %> <%= dose_object.ingredient.name %></p>
+<p><%= dose_object.description %> <%= dose_object.ingredient.name %> <%= link_to "Remove", dose_path(dose_object.id), method: :delete%></p>
 <% end %>
+
+<%= link_to "Back", cocktails_path, :class => "btn btn-warning"%>
+<%= link_to "Add a dose", new_doses_path(@cocktail), :class => "btn btn-success"%>

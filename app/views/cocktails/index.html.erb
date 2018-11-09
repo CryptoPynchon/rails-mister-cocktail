@@ -1,14 +1,21 @@
-<h1>Welcome to Vesper Lives</h1>
+<%= render 'banner'%>
 <div class="wrapper">
   <div class="container">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
-        <div class="col-xs-3">
-          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+            <%= link_to cocktail.name, cocktail_path(cocktail), class: "card-description" %>
+          </div>
         </div>
       <% end %>
     </div>
   </div>
+  <div class="container-create">
+    <div class="row-create">
+      <p>Creation is one of Nature's mandates.</p>
+      <%= link_to "Experiment", new_cocktail_path, class: "btn btn-danger btn-lg" %>
+    </div>
+  </div>
 </div>
-<%= link_to "Invent your own!", new_cocktail_path %>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+

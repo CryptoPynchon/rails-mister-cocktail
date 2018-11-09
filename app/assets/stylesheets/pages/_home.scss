@@ -1,1 +1,28 @@
 // Specific CSS for your home-page
+.wrapper {
+  background-color: #4d1212;
+}
+.col-xs-12, .col-sm-4 {
+  background-color: #4d1212;
+}
+
+.container-create {
+  display: flex;
+  height: 25vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url("kiss.gif");
+}
+.row-create {
+  text-align: center;
+  p {
+    color: #9B1212;
+  }
+  a {
+    text-decoration: none;
+    color: #9B1212;
+  }
+  a:hover {
+    color: #DB0000
+  }
+}
